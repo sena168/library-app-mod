@@ -1,81 +1,84 @@
-# Library Web App MVP
+# Library Web Application MVP
 
-A modern, responsive library management system built with React, TypeScript, and Tailwind CSS. This application allows users to browse books, manage loans, write reviews, and track their reading history.
+An up-to-date, adaptable library management platform developed using React, TypeScript, and Tailwind CSS. Users can explore available books, handle borrowing, submit reviews, and monitor their reading activity.
 
-## 🚀 Features
+## 🚀 Highlights
 
-### ✅ Completed Features
+### ✅ Finished Capabilities
 
-- **User Authentication**
+- **Account Access**
 
-  - Login and registration with JWT tokens
-  - Protected routes and session management
-  - Persistent authentication state
+  - Sign in and register with JWT authentication
+  - Restricted pages and session control
+  - Authentication persists between sessions
 
-- **Book Management**
+- **Book Handling**
 
-  - Browse books with search and filtering
-  - View detailed book information
-  - Grid and list view modes
-  - Real-time stock tracking
+  - Search and filter through book listings
+  - Access comprehensive book details
+  - Switch between grid or list displays
+  - Live inventory monitoring
 
-- **Loan System**
+- **Borrowing Feature**
 
-  - Borrow books with optimistic UI updates
-  - View loan history with status tracking
-  - Return books functionality
-  - Overdue book notifications
+  - Borrow books with instant UI response
+  - Review borrowing history and status
+  - Return borrowed items
+  - Alerts for overdue returns
 
-- **Review System**
+- **Review Functionality**
 
-  - Write and delete book reviews
-  - Star ratings and comments
-  - Optimistic UI updates for reviews
-  - View all reviews for books
+  - Add or remove book reviews
+  - Rate books and leave comments
+  - Immediate UI updates for review actions
+  - Browse all feedback for each title
 
-- **User Profile**
+- **User Account**
 
-  - View and edit profile information
-  - Library statistics dashboard
-  - Reading history overview
+  - View and update personal details
+  - Dashboard with library usage stats
+  - Overview of reading records
 
-- **Shopping Cart**
-  - Add books to cart for batch borrowing
-  - Remove items and clear cart
-  - Stock availability checking
+- **Batch Borrowing**
+  - Place multiple books in a cart for borrowing
+  - Remove or clear cart items
+  - Check stock before borrowing
 
-## 🛠 Tech Stack
+## 🛠 Technology Stack
 
-- **Frontend Framework**: React 18 + TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui components
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
 - **State Management**: Redux Toolkit
 - **Data Fetching**: TanStack Query (React Query)
 - **Routing**: React Router v6
-- **HTTP Client**: Axios
+- **HTTP Requests**: Axios
 - **Date Handling**: Day.js
 - **Notifications**: Sonner
 - **Build Tool**: Vite
+- **Testing**: Vitest
+- **Linting & Formatting**: ESLint, Prettier
+- **Icons**: Lucide React
 
-## 🏗 Architecture
+## 🏗 Structure
 
-### Project Structure
+### Folder Layout
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Basic UI components (Button, Input, Card, etc.)
-│   ├── Layout.tsx      # Main layout wrapper
-│   ├── Navbar.tsx      # Navigation header
-│   ├── Sidebar.tsx     # Side navigation
+├── components/          # Modular UI elements
+│   ├── ui/             # Basic UI (Button, Input, Card, etc.)
+│   ├── Layout.tsx      # Main page wrapper
+│   ├── Navbar.tsx      # Top navigation
+│   ├── Sidebar.tsx     # Side menu
 │   └── ProtectedRoute.tsx
-├── hooks/              # Custom React hooks
-│   ├── useAuth.ts      # Authentication hooks
-│   ├── useBooks.ts     # Book-related hooks
-│   └── useUser.ts      # User profile hooks
-├── lib/                # Utilities and configurations
+├── hooks/              # Custom hooks for logic
+│   ├── useAuth.ts      # Auth-related hooks
+│   ├── useBooks.ts     # Book logic hooks
+│   └── useUser.ts      # User info hooks
+├── lib/                # Configs and utilities
 │   ├── api.ts          # API client setup
 │   └── utils.ts        # Helper functions
-├── pages/              # Page components
+├── pages/              # Main page components
 │   ├── LoginPage.tsx
 │   ├── RegisterPage.tsx
 │   ├── HomePage.tsx
@@ -84,179 +87,181 @@ src/
 │   ├── LoansPage.tsx
 │   ├── ProfilePage.tsx
 │   └── CartPage.tsx
-├── store/              # Redux store configuration
-│   ├── index.ts        # Store setup
+├── store/              # Redux store setup
+│   ├── index.ts        # Store configuration
 │   └── slices/         # Redux slices
 │       ├── authSlice.ts
 │       ├── uiSlice.ts
 │       └── cartSlice.ts
-└── types/              # TypeScript type definitions
+└── types/              # TypeScript types
     └── api.ts          # API response types
 ```
 
-### Key Design Patterns
+### Main Patterns
 
-1. **Custom Hooks**: Encapsulate API calls and business logic
-2. **Optimistic Updates**: Immediate UI feedback for better UX
-3. **Component Composition**: Reusable UI components with shadcn/ui
-4. **Type Safety**: Full TypeScript coverage with API schema types
-5. **State Management**: Redux for global state, React Query for server state
+1. **Custom Hooks**: API and logic encapsulation
+2. **Optimistic UI**: Fast feedback for user actions
+3. **Composable Components**: Reusable UI via shadcn/ui
+4. **Type Safety**: Strong typing with TypeScript
+5. **State Handling**: Redux for app state, React Query for server data
 
-## 🔧 API Integration
+## 🔧 API Usage
 
-The application integrates with a REST API hosted at:
+Connects to a REST API at:
 `https://belibraryformentee-production.up.railway.app`
 
-### API Endpoints Used
+### Endpoints
 
-- **Authentication**: `POST /api/auth/login`, `POST /api/auth/register`
+- **Auth**: `POST /api/auth/login`, `POST /api/auth/register`
 - **Books**: `GET /api/books`, `GET /api/books/{id}`, `GET /api/books/recommend`
 - **Loans**: `POST /api/loans`, `GET /api/loans/my`, `PATCH /api/loans/{id}/return`
 - **Reviews**: `POST /api/reviews`, `GET /api/reviews/book/{bookId}`, `DELETE /api/reviews/{id}`
-- **User Profile**: `GET /api/me`, `PATCH /api/me`, `GET /api/me/loans`, `GET /api/me/reviews`
+- **User**: `GET /api/me`, `PATCH /api/me`, `GET /api/me/loans`, `GET /api/me/reviews`
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
+### Requirements
 
-- Node.js 18+ and npm
-- Modern web browser
+- Node.js 18 or newer
+- Updated web browser
 
-### Installation
+### Setup
 
-1. **Clone the repository**
+1. **Clone the project**
 
    ```bash
    git clone <repository-url>
    cd library-app
    ```
 
-2. **Install dependencies**
+2. **Install packages**
 
    ```bash
    npm install
    ```
 
-3. **Environment Setup**
-   The `.env` file is already configured with:
+3. **Configure environment**
+   The `.env` file includes:
 
    ```
    VITE_API_BASE_URL=https://belibraryformentee-production.up.railway.app
    ```
 
-4. **Start development server**
+4. **Run development server**
 
    ```bash
    npm run dev
    ```
 
-5. **Open in browser**
-   Navigate to `http://localhost:5173`
+5. **Access in browser**
+   Go to `http://localhost:5173`
 
-### Building for Production
+### Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## 📱 Features Overview
+## 📱 Feature Summary
 
-### Authentication Flow
+### Login & Registration
 
-- Users can register with name, email, and password
-- Login returns JWT token stored in localStorage
-- Protected routes redirect to login if not authenticated
-- Persistent sessions across browser refreshes
+- Register with name, email, password
+- Login provides JWT stored in localStorage
+- Protected pages redirect if not logged in
+- Sessions persist after refresh
 
-### Book Browsing
+### Book Discovery
 
-- Search books by title, author, or ISBN
-- Filter by categories and authors
-- Sort by title, publication year, or rating
-- Pagination for large result sets
-- Grid and list view modes
+- Search by title, author, ISBN
+- Filter by category or author
+- Sort by title, year, rating
+- Paginated results
+- Grid or list display options
 
-### Borrowing System
+### Borrowing
 
-- Add books to cart for batch borrowing
-- Real-time stock checking
-- Optimistic UI updates for instant feedback
-- Loan status tracking (BORROWED, RETURNED, OVERDUE)
-- Due date notifications and overdue warnings
+- Add books to cart for group borrowing
+- Check stock instantly
+- UI updates immediately after actions
+- Track loan status (BORROWED, RETURNED, OVERDUE)
+- Get notified about due dates and overdue items
 
-### Review System
+### Reviews
 
-- 5-star rating system with optional comments
-- Users can edit/delete their own reviews
-- View all reviews for each book
-- Average ratings displayed on book cards
+- Rate books (1-5 stars) and comment
+- Edit or remove your reviews
+- See all feedback for each book
+- Average ratings shown on book cards
 
-### User Dashboard
+### User Area
 
-- Personal library statistics
-- Current loans and reading history
-- Profile management with editable information
-- Recent reviews overview
+- View personal library stats
+- See current loans and reading history
+- Update profile details
+- Recent reviews summary
 
-## 🎨 UI/UX Features
+## 🎨 UI/UX Details
 
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Loading States**: Skeleton loaders and loading indicators
-- **Error Handling**: User-friendly error messages
-- **Toast Notifications**: Success and error feedback
-- **Optimistic Updates**: Instant UI feedback
-- **Accessibility**: Keyboard navigation and screen reader support
+- **Mobile Friendly**: Works on all devices
+- **Loading Feedback**: Skeletons and spinners
+- **Error Messages**: Clear user alerts
+- **Toasts**: Success/error notifications
+- **Optimistic UI**: Fast response to actions
+- **Accessibility**: Keyboard and screen reader support
 
-## 🔄 State Management
+## 🔄 State Handling
 
-### Redux Store Structure
+### Redux Slices
 
-- **authSlice**: User authentication and profile data
-- **uiSlice**: Search filters, pagination, and UI state
-- **cartSlice**: Shopping cart for batch book borrowing
+- **authSlice**: Auth and user info
+- **uiSlice**: Filters, pagination, UI state
+- **cartSlice**: Cart for borrowing
 
 ### TanStack Query
 
-- **Caching**: Intelligent caching with stale-while-revalidate
-- **Background Updates**: Automatic data synchronization
-- **Optimistic Updates**: Immediate UI feedback for mutations
-- **Error Handling**: Automatic retry and error boundaries
+- **Cache**: Smart caching and updates
+- **Sync**: Background data refresh
+- **Optimistic UI**: Fast mutation feedback
+- **Error Handling**: Retries and boundaries
 
-## 🛡 Security Features
+## 🛡 Security
 
-- JWT token authentication
-- Automatic token refresh handling
-- Protected API routes
-- Input validation and sanitization
-- XSS protection through React's built-in escaping
+- JWT-based authentication
+- Automatic token renewal
+- Protected API endpoints
+- Input checks and sanitization
+- XSS protection via React
 
-## 📝 Development Notes
+## 📝 Dev Practices
 
 ### Code Quality
 
-- TypeScript for type safety
-- ESLint and Prettier for code formatting
-- Component-based architecture
-- Custom hooks for logic reuse
-- Comprehensive error handling
+- TypeScript for types
+- ESLint/Prettier for formatting
+- Modular components
+- Custom hooks for shared logic
+- Robust error handling
 
-### Performance Optimizations
+### Performance
 
-- Code splitting with React.lazy()
-- Image lazy loading
-- Memoization of expensive computations
-- Efficient re-rendering with proper dependency arrays
-- Bundle size optimization with tree shaking
+- Code splitting with React.lazy
+- Lazy load images
+- Memoize heavy calculations
+- Efficient re-renders
+- Smaller bundles with tree shaking
 
-## 🙏 Acknowledgments
+## 🙏 Credits
 
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [TanStack Query](https://tanstack.com/query) for excellent data fetching
-- [Redux Toolkit](https://redux-toolkit.js.org/) for state management
-- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
-- [Lucide React](https://lucide.dev/) for the icon system
+- [shadcn/ui](https://ui.shadcn.com/) for UI elements
+- [TanStack Query](https://tanstack.com/query) for data management
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Lucide React](https://lucide.dev/) for icons
+- [Vitest](https://vitest.dev/) for testing
+- [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for code quality
 
 ---
 
-Built with ❤️ using modern React and TypeScript
+Created with 🫶 using React and TypeScript

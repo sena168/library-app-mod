@@ -295,3 +295,6 @@ firebase-debug.*.log
 .vercel
 
 .vercel
+
+#external scripts/ non essential scripts/ mods/ logs
+external-scripts
