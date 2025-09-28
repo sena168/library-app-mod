@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Library Design System Colors */
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #334155;
+  --color-accent: #0f172a;
+  --color-accent-foreground: #ffffff;
+  --color-background: #fafafa;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-border: #e2e8f0;
+  --color-input: #ffffff;
+  --color-ring: #2563eb;
+  --color-muted: #f8fafc;
+  --color-muted-foreground: #64748b;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-success: #16a34a;
+  --color-success-foreground: #ffffff;
+  --color-warning: #ea580c;
+  --color-warning-foreground: #ffffff;
+  --radius: 0.75rem;
+
+  /* Figma Design System Colors */
+  --color-figma-primary: #1c65da;
+  --color-figma-text-primary: #0a0d12;
+  --color-figma-text-secondary: #535862;
+  --color-figma-border: #d5d7da;
+  --color-figma-accent: #ee1d52;
+
+  /* Fonts */
+  --font-family-quicksand: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Inter', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+}
+
+/* Custom utility classes for library design */
+.book-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200;
+}
+
+.stat-card {
+  @apply bg-white p-6 rounded-xl shadow-sm border border-gray-100;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors;
+}
+
+/* Hide scrollbar for mobile filter tags */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
