@@ -1,3 +1,5 @@
+# this is the modified app
+
 # Library Web Application MVP
 
 An up-to-date, adaptable library management platform developed using React, TypeScript, and Tailwind CSS. Users can explore available books, handle borrowing, submit reviews, and monitor their reading activity.
